@@ -1,6 +1,15 @@
 pipeline {
     agent any
 
+stages{
+    stage('Check update Jenkins') {
+        when {changeset "*/test-for-jenkins/**"}
+    steps{
+        echo 'File update'
+            }
+        }
+    }
+
     stages {
         stage('Hello') {
             steps {
