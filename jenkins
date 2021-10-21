@@ -3,7 +3,6 @@ pipeline {
 
     stages {
         stage('Hello') {
-            when {changeset "*/test-for-jenkins/**"}
             steps {
                 echo 'Hello World'
             }
