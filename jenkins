@@ -3,7 +3,7 @@ pipeline {
 
 	stages{
 		stage('Check update Jenkins') {
-			when {changeset "*/test-for-jenkins/**"}
+          	  when { changeset "**/jenkins" }
 		steps{
 			echo 'File update'
             }
