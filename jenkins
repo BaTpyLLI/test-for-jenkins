@@ -6,6 +6,7 @@ pipeline {
 	  when { changeset "**/test.txt" }
             steps {
 		echo 'Запрос был обновлен, стартуем'
+		sh 'cat test.txt'
                 sh 'mysql --user rfamro --host mysql-rfam-public.ebi.ac.uk --port 4497 --database Rfam < test.txt'
 				}
 			}
